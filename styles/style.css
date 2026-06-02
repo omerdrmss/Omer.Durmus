@@ -1,0 +1,377 @@
+/* Sıfırlama */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Tahoma, Verdana, sans-serif;
+  background-color: #fdfce8; /* Çok çok uçuk, göz yormayan bir sarı/krem */
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navbar (Flexbox Kullanımı) yapildi */
+nav {
+  background-color: #b30000; /* Koyu Kırmızı */
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 5px solid #ffcc00; /* Altına kalın sarı çizgi */
+}
+
+nav .logo {
+  color: #ffcc00; /* Sarı logo metni */
+  font-size: 26px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 15px;
+}
+
+nav ul li a {
+  color: white;
+  padding: 8px 12px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  background-color: #ffcc00; /* Üstüne gelince aniden sarı olur (animasyonsuz, tam öğrenci işi) */
+  color: #b30000;
+}
+
+/* Footer */
+footer {
+  background-color: #b30000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  border-top: 5px solid #ffcc00;
+}
+
+/* Ana Sayfa Hero */
+.hero {
+  background-color: #ffcc00; /* Sarı arka plan */
+  color: #b30000; /* Kırmızı yazı */
+  text-align: center;
+  padding: 60px 20px;
+  border-bottom: 3px solid #b30000;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero a.btn {
+  background-color: #b30000;
+  color: white;
+  padding: 12px 25px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+  border: 2px solid #000;
+}
+
+.hero a.btn:hover {
+  background-color: black;
+}
+
+/* Kategoriler (Grid Kullanımı yaptik bu alanda) */
+.kategoriler {
+  padding: 30px;
+  text-align: center;
+}
+
+.kategori-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.kategori-kart {
+  background-color: white;
+  border: 2px solid #b30000;
+  padding: 25px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #b30000;
+}
+
+.kategori-kart:hover {
+  background-color: #ffcc00;
+  color: black;
+}
+
+/* Quiz Bölümü */
+.quiz-bolumu {
+  border: 3px dashed #b30000; 
+  width: 80%;
+  margin: 30px auto;
+  padding: 25px;
+  text-align: center;
+  background-color: white;
+}
+
+.quiz-kutu {
+  margin-top: 20px;
+}
+
+.secenekler-alani {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.btn-secenek {
+  background-color: white;
+  border: 2px solid #000;
+  padding: 12px;
+  margin-bottom: 10px;
+  width: 60%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-secenek:hover {
+  background-color: #f2f2f2;
+}
+
+.btn-secenek.dogru {
+  background-color: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.btn-secenek.yanlis {
+  background-color: #dc3545;
+  color: white;
+  border-color: #dc3545;
+}
+
+.quiz-sonraki-btn, .quiz-sonuc {
+  display: none;
+  margin-top: 20px;
+}
+
+/* Ürün Listesi (Grid Kullanımına devam ) */
+.urun-listesi {
+  padding: 30px;
+  text-align: center;
+}
+
+.urun-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 25px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.urun-kart {
+  background-color: white;
+  border: 2px solid #000;
+  padding: 15px;
+}
+
+.urun-kart img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #000;
+  margin-bottom: 10px;
+}
+
+.urun-kart .fiyat {
+  font-weight: bold;
+  color: #b30000;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.btn-detay {
+  background-color: #b30000;
+  color: white;
+  padding: 8px 20px;
+  border: 2px solid #000;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.btn-detay:hover {
+  background-color: #ffcc00;
+  color: black;
+}
+
+/* Ürün Detay (Flexbox Kullanımı) */
+.urun-detay {
+  display: flex;
+  width: 85%;
+  margin: 40px auto;
+  border: 3px solid #b30000;
+  background-color: white;
+  padding: 30px;
+}
+
+.urun-detay img {
+  width: 40%;
+  border: 2px solid #000;
+}
+
+.detay-bilgi {
+  padding-left: 30px;
+}
+
+.detay-bilgi h1 {
+  color: #b30000;
+  margin-bottom: 15px;
+}
+
+.btn-sepet {
+  background-color: #b30000;
+  color: white;
+  padding: 12px 25px;
+  border: 2px solid #000;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.btn-sepet:hover {
+  background-color: #ffcc00;
+  color: black;
+}
+
+/* Sepet */
+.sepet-alani {
+  width: 80%;
+  margin: 40px auto;
+  background-color: white;
+  padding: 20px;
+  border: 2px solid #000;
+}
+
+#sepet-listesi {
+  list-style-type: none;
+}
+
+#sepet-listesi li {
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-sil {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.btn-sil:hover {
+  background-color: #dc3545;
+}
+
+/* İletişim Formu */
+.iletisim-alani {
+  width: 50%;
+  margin: 40px auto;
+  background-color: white;
+  border: 2px solid #b30000;
+  padding: 30px;
+}
+
+.form-grup {
+  margin-bottom: 20px;
+}
+
+.form-grup label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #b30000;
+}
+
+.form-grup input, .form-grup textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+}
+
+.form-grup input:focus, .form-grup textarea:focus {
+  border-color: #ffcc00;
+  outline: none;
+}
+
+.btn-gonder {
+  background-color: #b30000;
+  color: white;
+  padding: 12px 30px;
+  border: 2px solid #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Responsive Tasarım (Zorunlu Kural Burası önemli Unutmaa */
+@media (max-width: 800px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  nav ul {
+    margin-top: 15px;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 5px 10px;
+  }
+
+  .kategori-grid, .urun-grid {
+    grid-template-columns: auto auto;
+    width: 100%;
+  }
+
+  .urun-detay {
+    flex-direction: column;
+  }
+
+  .urun-detay img {
+    width: 100%;
+  }
+
+  .detay-bilgi {
+    padding-left: 0;
+    margin-top: 25px;
+  }
+  
+  .iletisim-alani {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .kategori-grid, .urun-grid {
+    grid-template-columns: auto;
+  }
+}

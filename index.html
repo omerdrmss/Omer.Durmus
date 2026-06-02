@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DurmuSport - Spor Malzemeleri</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">🏋️ DurmuSport</div>
+    <ul>
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li><a href="pages/urunler.html">Ürünler</a></li>
+      <li><a href="pages/sepet.html">Sepet</a></li>
+      <li><a href="pages/iletisim.html">İletişim</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <h1>Spora Adım At!</h1>
+    <p>En kaliteli spor malzemeleri uygun fiyatlarla DurmuSport'da.</p>
+    <a href="pages/urunler.html" class="btn">Ürünleri İncele</a>
+  </div>
+
+  <div class="kategoriler">
+    <h2>Kategoriler</h2>
+    <div class="kategori-grid">
+      <div class="kategori-kart">⚽ Futbol</div>
+      <div class="kategori-kart">🏀 Basketbol</div>
+      <div class="kategori-kart">🎾 Tenis</div>
+      <div class="kategori-kart">🏊 Yüzme</div>
+      <div class="kategori-kart">🚴 Bisiklet</div>
+      <div class="kategori-kart">🥊 Boks</div>
+    </div>
+  </div>
+
+  <div class="quiz-bolumu">
+    <h2>⚽ Türk Futbolu Bilgi Yarışması</h2>
+    <p class="quiz-aciklama">Bakalım Türk futbol tarihine ne kadar hakimsin? 10 soruluk testi çöz, sonucunu gör!</p>
+
+    <div id="quiz-ekrani" class="quiz-kutu">
+      <p id="soru-metni" class="soru-metni"></p>
+      <div id="secenekler-alani" class="secenekler-alani"></div>
+      <p id="quiz-mesaj" class="quiz-mesaj"></p>
+      <button id="btn-sonraki" class="btn-sepet quiz-sonraki-btn" onclick="sonrakiSoru()">Sonraki Soru ➡️</button>
+    </div>
+
+    <div id="quiz-sonuc-ekrani" class="quiz-kutu quiz-sonuc">
+      <h3>Yarışma Bitti!</h3>
+      <p id="skor-metni" class="skor-metni"></p>
+      <button class="btn-sepet" onclick="quiziBaslat()">🔄 Yeniden Oyna</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 DurmuSport. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script src="scripts/myscript.js"></script>
+</body>
+</html>
